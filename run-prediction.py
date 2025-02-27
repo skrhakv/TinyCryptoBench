@@ -6,8 +6,9 @@ from CryptoBenchClassifier import CryptoBenchClassifier
 PATH = 'data/model-650M.pt'
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-model = torch.load(PATH, weights_only=False)
-print(model)
+model = torch.jit.load(PATH)
+model.eval()
+
 logits = model(torch.tensor(np.load('data/7qoqA.npy'), dtype=torch.float32).to(device)).squeeze()
 pred = torch.round(torch.sigmoid(logits))
 print(pred)
