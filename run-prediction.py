@@ -1,8 +1,6 @@
 import torch
 import numpy as np
 
-from CryptoBenchClassifier import CryptoBenchClassifier
-
 PATH = 'data/model-650M.pt'
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
