@@ -12,3 +12,6 @@ Before running the model, install torch version `2.2.1`:
 ```
 python3 -m pip install -r requirements.txt
 ```
+
+## License
+This repository is licensed under the [MIT license](https://github.com/skrhakv/smaller-cryptobench-model/blob/master/LICENSE).
